@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradientbg"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:id="@+id/ll_head"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_gravity="left|center"
+            android:background="@drawable/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Appointments"
+            android:id="@+id/tv_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_20sdp"
+        android:background="@drawable/uper_corner_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:paddingRight="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/box_wt"
+                    android:orientation="horizontal"
+                    android:id="@+id/ll_searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_6sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/search"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"/>
+
+                    <AutoCompleteTextView
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/search_hint"
+                        android:paddingLeft="@dimen/_35sdp"
+                        android:gravity="center|left"
+                        android:backgroundTint="@android:color/transparent"
+                        android:id="@+id/AutosearchView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="5dp"
+                        android:completionThreshold="1"
+                        android:background="@null"
+                        android:hint="Search Patient"
+                        android:iconifiedByDefault="false"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="visible">
+
+                       <!-- <requestFocus />-->
+
+                    </AutoCompleteTextView>
+
+                    <SearchView
+                        android:visibility="gone"
+                        android:id="@+id/searchView"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:elevation="5dp"
+                        android:iconifiedByDefault="false"
+                        android:queryHint="Search Patients"
+                        android:searchHintIcon="@drawable/search"
+                        android:theme="@style/AppSearchView"
+                        app:queryBackground="@null" />
+
+
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:background="@drawable/spinner_bg"
+                    android:id="@+id/ll_spiner"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_below="@id/ll_searchView"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.weiwangcn.betterspinner.library.BetterSpinner
+                        android:id="@+id/spinner_procedure1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:paddingLeft="@dimen/_7sdp"
+                        android:drawableEnd="@drawable/ic_down_arraow"
+                        android:drawableTint="@color/spinner_itemcolor"
+                        android:fontFamily="@font/poppins_regular"
+                        android:hint="Select a Procedure"
+                        android:textColor="@color/spinner_itemcolor"
+                        android:textSize="@dimen/_12sdp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+
+                    <Spinner
+                        android:visibility="gone"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:stateListAnimator="@drawable/spinner_sla"
+                        android:spinnerMode="dropdown"
+                        android:autofillHints="Select a procedure"
+                        android:id="@+id/spinner_procedure"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:id="@+id/calenderview"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_below="@id/ll_spiner"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_year"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2022"/>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_month"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="@dimen/_16sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="December"/>
+
+                        <ImageView
+                            android:id="@+id/iv_drop"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_down_arraow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:background="@drawable/custome_button"
+                            android:gravity="center"
+                            android:text="10:00AM"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp" />
+
+
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/box_wt"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <!-- Add CalendarView to display the Calendar -->
+                        <CalendarView
+                            android:dateTextAppearance="@style/CalenderViewDateCustomText"
+                            android:theme="@style/CalenderViewCustom"
+                            android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+                            android:id="@+id/calendar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </CalendarView>
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:id="@+id/ll_time"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_below="@id/calenderview"
+                    android:weightSum="2"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp">
+
+
+                    <LinearLayout
+
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+
+                        <Button
+                            android:id="@+id/tv_10"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/custome_button"
+                            android:gravity="center"
+                            android:text="10:00AM"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <Button
+                            android:id="@+id/tv_11"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:background="@drawable/custome_button"
+                            android:text="11:00AM"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"/>
+
+                        <Button
+                            android:id="@+id/tv_12"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:background="@drawable/custome_button"
+                            android:text="12:00AM"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+
+                        <Button
+                            android:id="@+id/tv_1"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:background="@drawable/custome_button"
+                            android:text="01:00PM"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"/>
+
+                        <Button
+                            android:id="@+id/tv_2"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:background="@drawable/custome_button"
+                            android:text="02:00PM"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"/>
+
+                        <Button
+                            android:id="@+id/tv_3"
+                            android:textSize="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:background="@drawable/custome_button"
+                            android:text="03:00PM"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"/>
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:id="@+id/btn_schedule"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textAllCaps="false"
+                    android:text="Schedule Appointment"
+                    android:background="@drawable/button_active"
+                    android:layout_below="@id/ll_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"/>
+            </RelativeLayout>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

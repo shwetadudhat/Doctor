@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/llFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+        <!-- android:background="@drawable/gradientbg"-->
+        <FrameLayout
+            android:id="@+id/flFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="@+id/nav_card"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/nav_card"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/uper_corner"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:paddingLeft="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+
+                <View
+                    android:background="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    android:id="@+id/v1"
+                    android:layout_width="18dp"
+                    android:layout_height="2dp"/>
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/iv_home"
+                        android:layout_gravity="center"
+                        android:background="@drawable/home"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:textSize="@dimen/_8sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="Home"
+                        android:id="@+id/tv_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_nootification"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+
+                <View
+                    android:layout_gravity="center"
+                    android:id="@+id/v2"
+                    android:layout_width="18dp"
+                    android:layout_height="2dp"/>
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/iv_notification"
+                        android:layout_gravity="center"
+                        android:background="@drawable/notification"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:textSize="@dimen/_8sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:textColor="@color/border"
+                        android:gravity="center"
+                        android:text="Notifications"
+                        android:id="@+id/tv_notification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_message"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+
+                <View
+                    android:layout_gravity="center"
+                    android:id="@+id/v3"
+                    android:layout_width="18dp"
+                    android:layout_height="2dp"/>
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/iv_msg"
+                        android:layout_gravity="center"
+                        android:background="@drawable/messages"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:textSize="@dimen/_8sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:textColor="@color/border"
+                        android:gravity="center"
+                        android:text="Messages"
+                        android:id="@+id/tv_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_profile"
+                android:paddingRight="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+
+                <View
+                    android:layout_gravity="center"
+                    android:id="@+id/v4"
+                    android:layout_width="18dp"
+                    android:layout_height="2dp"/>
+
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/iv_profile"
+                        android:layout_gravity="center"
+                        android:background="@drawable/user"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:textSize="@dimen/_8sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:textColor="@color/border"
+                        android:gravity="center"
+                        android:text="Profile"
+                        android:id="@+id/tv_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+       <!-- <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_nav_menu"/>-->
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

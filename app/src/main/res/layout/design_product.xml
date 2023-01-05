@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:fontFamily="@font/poppins_regular"
+    android:id="@+id/tv_name"
+    android:padding="@dimen/_2sdp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/_12sdp"
+    android:textColor="@color/spinner_itemcolor"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
+

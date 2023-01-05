@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_80sdp"
+    android:orientation="vertical"
+    android:background="@drawable/button_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--        <ImageButton-->
+            <!--            android:id="@+id/bidCutBtn"-->
+            <!--            style="@style/form_cut_icon_button"-->
+            <!--            android:layout_marginRight="@dimen/dimen_10dp" />-->
+
+            <TextView
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title Form" />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_height="@dimen/_20sdp"
+        android:layout_width="@dimen/_20sdp"
+        android:src="@drawable/ic_baseline_close_24"
+        android:id="@+id/bidCutBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

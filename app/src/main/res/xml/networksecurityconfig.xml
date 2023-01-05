@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">dreamcatcherbykashish.com</domain>
+        <domain includeSubdomains="true">148.72.177.15</domain>
+    </domain-config>
+</network-security-config>
+
+<!--<network-security-config>-->
+<!--   &lt;!&ndash; <base-config cleartextTrafficPermitted="true" />&ndash;&gt;-->
+
+<!--    <base-config cleartextTrafficPermitted="false">-->
+<!--        <trust-anchors>-->
+<!--            <certificates src="system" />-->
+<!--        </trust-anchors>-->
+<!--    </base-config>-->
+
+<!--</network-security-config>-->
+

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradientbg"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:id="@+id/ll_head"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_gravity="left|center"
+            android:background="@drawable/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Appointments"
+            android:id="@+id/tv_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_addapoin"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:layout_gravity="right|center"
+                android:background="@drawable/add_appointment"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_40sdp"
+        android:background="@drawable/uper_corner_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_curdate"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/date"
+                    android:textSize="@dimen/_16sdp"
+                    android:text="December,10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+                <LinearLayout
+                    android:gravity="right"
+                    android:layout_gravity="right"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_prev"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:background="@drawable/button_active1"
+                        android:gravity="center"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:id="@+id/tv_month"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="@dimen/_11sdp"
+                        android:textColor="@color/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="December"/>
+
+                    <LinearLayout
+                        android:layout_margin="@dimen/_3sdp"
+                        android:background="@drawable/button_active1"
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp">
+
+                        <ImageView
+                            android:padding="@dimen/_3sdp"
+                            android:id="@+id/iv_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+         <!--   <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay">-->
+
+                <com.sparrow.doctor.HorizontalCalanderView.HorizontalCalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:textColorSelected="@color/white"
+                    app:selectorColor="#00000000"
+                   />
+
+          <!--  </com.google.android.material.appbar.AppBarLayout>-->
+
+
+            <TextView
+                android:layout_marginTop="@dimen/_35sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/date"
+                android:textSize="@dimen/_14sdp"
+                android:text="Today's Appointments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--android:background="@drawable/home1"-->
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
